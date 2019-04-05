@@ -191,7 +191,13 @@ class _HomeState extends State<Home> {
                       color: Colors.grey.withOpacity(0.9),
                       fontWeight: FontWeight.bold
                   ),),
-                
+
+                new Text("Comment",
+                  style: TextStyle(
+                      fontSize: 21.0,
+                      color: Colors.grey.withOpacity(0.9),
+                      fontWeight: FontWeight.bold
+                  ),),
 
 
               ],
