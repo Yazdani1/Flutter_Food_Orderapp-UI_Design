@@ -154,10 +154,6 @@ class _HomeState extends State<Home> {
                             ],
                           ),
                         ),
-
-
-
-
                       ],
                     ),
                   ),
@@ -168,7 +164,7 @@ class _HomeState extends State<Home> {
 
           new SizedBox(height: 10.0,),
           new Container(
-            margin: EdgeInsets.all(20.0),
+            margin: EdgeInsets.all(10.0),
             child: new Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -195,6 +191,18 @@ class _HomeState extends State<Home> {
 
               ],
             ),
+          ),//end container
+
+          new Container(
+
+            child: new Column(
+              children: <Widget>[
+
+                listData("assets/ee.jpg", "Burger Food", "\$+6.5", "Spyc"),
+                listData("assets/ee.jpg", "Burger Food", "\$+6.5", "Spyc")
+
+              ],
+            ),
           )
 
         ],//end list view
@@ -203,4 +211,63 @@ class _HomeState extends State<Home> {
 
     );
   }
+
+  //this widget method is for list of data item
+
+  Widget listData(String image,String title,String price,String item){
+    return new Container(
+      margin: EdgeInsets.all(10.0),
+      child: new Card(
+        elevation: 10.0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10.0),
+        ),
+
+        child: new Container(
+
+          child: new Row(
+            children: <Widget>[
+
+              new Container(
+                padding: EdgeInsets.all(10.0),
+
+                child: new ClipRRect(
+                  borderRadius: BorderRadius.circular(90.0),
+
+                  child: new Image(
+                      image: AssetImage("assets/ee.jpg"),
+                    height: 60.0,
+                    width: 60.0,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              new SizedBox(width: 10.0,),
+              new Container(
+                child: new Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    
+                    new Text(title,
+                    style: TextStyle(fontSize: 20.0,color: Colors.black),
+                    ),
+                    new SizedBox(height: 10.0,),
+                    new Text(price,
+                    style: TextStyle(fontSize: 20.0,color: Colors.deepOrange),
+                    )
+                    
+                  ],
+                ),
+              )
+
+            ],
+          ),
+
+        ),
+
+      ),
+    );
+  }
+
+
 }
