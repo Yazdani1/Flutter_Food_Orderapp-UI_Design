@@ -199,7 +199,10 @@ class _HomeState extends State<Home> {
               children: <Widget>[
 
                 listData("assets/ee.jpg", "Burger Food", "\$+6.5", "Spyc"),
-                listData("assets/ee.jpg", "Burger Food", "\$+6.5", "Spyc")
+                listData("assets/e.jpg", "Dinner Item", "\$+89.5", "Spyc"),
+                listData("assets/g.jpg", "Sandwitch Item", "\$+9.5", "Spyc"),
+                listData("assets/h.jpg", "Breakfast Item", "\$+60.5", "Spyc"),
+
 
               ],
             ),
@@ -235,7 +238,7 @@ class _HomeState extends State<Home> {
                   borderRadius: BorderRadius.circular(90.0),
 
                   child: new Image(
-                      image: AssetImage("assets/ee.jpg"),
+                      image: AssetImage(image),
                     height: 60.0,
                     width: 60.0,
                     fit: BoxFit.cover,
